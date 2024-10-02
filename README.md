@@ -1,6 +1,6 @@
-2024/09/25 수업내용
+2024/10/02 수업내용
 
-2024/09/25 수업내용
+2024/10/02 수업내용
 
 # Next.js
 
@@ -15,22 +15,44 @@
 
 ### 라우팅 시스템
 
-- React는 React 라우팅을 사용
+- ~~React는 React 라우팅을 사용~~
 - Next는 파일시스템 기반 페이지 라우팅 사용
 - page는 js,jsx,ts,tsx파일의 이름으로 라우팅
-- ```
-    pages/
+  ```
+  pages/
       - index.jsx
       - constact.jsx
   ```
 - next는 디렉토리 이름으로 라우팅
-- ```
+  ```
     app/
-      - poage.jsx
+      - page.jsx
       - constact/
         - page.jsx
   ```
-- 라우팅에 규칙을 만들고 싶으면 [slug].js 파일이
+- 라우팅에 기본 세그먼트를 만들고 싶으면 [slug].jsx 파일이
+  ```
+    pages/
+      -bar/
+        - index.jsx
+        - [foo].jsx
+  ```
+- 라우팅에 포갈적 세그먼트를 만들고 싶으면[...slug].jsx 파일이 (가져올때 배열로 가져온다)
+  - 값이 없으면 404 오류를 출력
+  ```
+    pages/
+      -bar/
+        - index.jsx
+        - [...foo].jsx
+  ```
+- 라우팅에 포갈적 세그먼트(언디파인) 만들고 싶으면[[slug]].jsx 파일 (가져올때 배열로 가져온다)
+  - 값이 없어도 오류가 없음
+  ```
+    pages/
+      -bar/
+        - index.jsx
+        - [[...foo]].jsx
+  ```
 - 동적 라우팅은 중첩이 가능
 
 ### 동적 라우팅
