@@ -1,6 +1,6 @@
-2024/10/30 수업내용
+2024/11/06 수업내용
 
-2024/10/30 수업내용
+2024/10/06 수업내용
 
 # Next.js
 
@@ -9,7 +9,39 @@
 [1과](#1과)  
 [2과](#2과)  
 [3과](#3과)  
-[4과](#4과)
+[4과](#4과)  
+[5과](#5과)  
+[6과](#6과)  
+[7과](#7과)
+
+## 7과
+
+### UI 라이브러리
+
+- UI라이브러리, 프레임워크, 유틸리티는 필수 X
+- 생산성 향상 및 UI 일관성
+- Chakra UI
+- ~~Tailwind Css~~ Tailwind UI
+- Headless
+
+### Chakra UI
+
+- 버튼, 모달, 입력등 다양한 내장 컴포넌트 제공
+- dark mode, light mode 지원
+- 타입스크립트로 작성되여 있음
+
+### ~~Tailwind CSS~~ Tailwind UI
+
+- 리액트 컴포넌트을 제공하지 않음
+- ~~CSS 클래스만 제공한다~~
+- Next.js는 TailwindCSS을 많이 사용
+- 변수값을 조정하여 개성있는 디자인을 만들 수 있음
+- 클래스 이름이 너무 길다
+- dark mode, light mode 지원
+- ~~Headless와 같이 사용한다~~ 지금은 꼭 같이 사용이 강요가 아니다
+- ```
+   <p className="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl">
+  ```
 
 ## 6과
 
