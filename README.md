@@ -1,6 +1,6 @@
-2024/11/06 수업내용
+2024/11/13 수업내용
 
-2024/10/06 수업내용
+2024/11/13 수업내용
 
 # Next.js
 
@@ -62,30 +62,32 @@
 
 ## 5과
 
-### 디렉토리 구조 구성
+### Props
 
-- 특정 파일과 디렉토리 지정된 위치
-- node modules: 의존성 패키지를 설치하는 디렉토리
+- 단방향
+- 부모에서 자식 반향으로 흐름
+- 계층 구조가 복잡하면 Props Drilling 형상 발생
 
-### 아토믹 디자인
+### Props Drilling
 
-- atomes: 가장 기본직인 컴포넌트
-- molecules: atomes에 속한 컴포넌트을 조합하는 곳
-- organisms: atomes, molecules을 섞어서 만들는 것
-- templates: 위에 모든 컴포넌트를 사용하여 페이지 구성
+- 중간에 필요 없는 props를 전달
+- 정달 받아야 될 컴포넌트까지 전달되지 않을 경우 문제 찾기가 힘듬
+- 필요 이상의 복잡한 코드
+- props를 전역적으로 사용하기 위해 contextAPI 혹은 REDIC를 사용
 
-### 유틸리티 구성
+### Context API
 
-- 컴포넌트로 만들필요가 없는 것
-- 로그파일
-
-### 데이터 불러오기
+- 적역저으로 사용 할 수 있음
+- 상태 관리 자체는 usrState에서
+- component가 props를 사용하지 않고, 하위 component를 포함한 모든 component에 데이터를 사용할 수 있도록 해줌
+-
 
 ## 4과
 
 [Layout](#layout)  
 [Page Layout](#page-layout)  
-[App Layout](#app-layout)
+[App Layout](#app-layout)  
+[디렉토리 구조 구성](#디렉토리-구조-구성)
 
 ### Layout
 
@@ -196,6 +198,7 @@
 ### image component - romote
 
 - next.config.mjs에 설정
+
   ```
     images: {
       remotePatterns:[
@@ -206,6 +209,25 @@
       ]
     }
   ```
+
+### 디렉토리 구조 구성
+
+- 특정 파일과 디렉토리 지정된 위치
+- node modules: 의존성 패키지를 설치하는 디렉토리
+
+### 아토믹 디자인
+
+- atomes: 가장 기본직인 컴포넌트
+- molecules: atomes에 속한 컴포넌트을 조합하는 곳
+- organisms: atomes, molecules을 섞어서 만들는 것
+- templates: 위에 모든 컴포넌트를 사용하여 페이지 구성
+
+### 유틸리티 구성
+
+- 컴포넌트로 만들필요가 없는 것
+- 로그파일
+
+### 데이터 불러오기
 
 ## 3과
 
